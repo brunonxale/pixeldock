@@ -1,0 +1,30 @@
+version: "3.9"
+
+services:
+  nextjs:
+    build: .
+    container_name: pixeldock_nextjs
+    ports:
+      - "3000:3000"
+    volumes:
+      - .:/app
+      - /app/node_modules
+    environment:
+      NODE_ENV: development
+      DATABASE_URL: postgres://postgres:postgres@db:5432/pixeldock
+    depends_on:
+      - db
+
+  db:
+    image: postgres:15-alpine
+    container_name: pixeldock_db
+    restart: always
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: pixeldock
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+
+volumes:
+  pgdata:
