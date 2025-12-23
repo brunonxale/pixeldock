@@ -58,7 +58,7 @@ src/
     DATABASE_URL=postgres://username:password@localhost:5432/pixeldock
 
 3. Run with Docker
-    docker-compose up --build
+    docker compose up --build
     This will start:
         Next.js on http://localhost:3000
         PostgreSQL on port 5432
