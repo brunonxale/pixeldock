@@ -28,14 +28,16 @@ A simple user management app built with **Next.js**, **TypeScript**, **Redux Too
 
 ## Project Structure
 src/
-├── app/ # Next.js App Router pages
-├── components/ # React components
-├── pages/api/ # API routes
-├── services/ # RTK Query API services
-├── store/ # Redux store
-├── types/ # TypeScript types
-├── styles/ # Tailwind/global CSS
 
+    .
+    ├── app/ # Next.js App Router pages
+    ├── components/ # React components
+    ├── pages/api/ # API routes
+    ├── services/ # RTK Query API services
+    ├── store/ # Redux store
+    ├── types/ # TypeScript types
+    └── styles/ # Tailwind/global CSS
+    
 ---
 
 ## Requirements
